@@ -1,4 +1,7 @@
-This project aimed to explore InfluxDB schema and data.
+InfluxDB Schema Explorer
+========================
+
+This project is aimed to explore InfluxDB schema and data.
 
 
 ## Installation and usage
