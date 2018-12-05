@@ -107,3 +107,6 @@ venv.bak/
 
 # IDEA
 .idea
+
+# Mute andyceo/pylibs dependency (see README)
+pylibs
