@@ -52,3 +52,7 @@ Explore your InfluxDB:
 If your InfluxDB is running as Docker Swarm service and use overlay network that accept regular containers to attach to it, you can add `--net` parameter:
 
     sudo docker run --rm --net your_influxdb_overlay_network andyceo/influxdb-schema-explorer --influxdb-host example.com --inlfuxdb-port 8086 --influxdb-user root --influxdb-password="secretsecret" --influxdb-database your-db
+
+After successfull execution, you will get something like this:
+
+![Usage example](docs/usage_example.png?raw=true "Usage example")
