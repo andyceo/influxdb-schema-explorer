@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from colors import color
-from pylibs import influxdb
+from pylibs import dbinflux
 from pylibs import utils
 import argparse
 import tabulate
@@ -128,7 +128,7 @@ def print_points(points):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Get InfluxDB server schema quick view '
                                                  '(global admin credentials required)')
-    influxdb.argparse_add_influxdb_options(parser)
+    dbinflux.argparse_add_influxdb_options(parser)
     args = parser.parse_args()
     influxdb_password = utils.argparse_get_filezed_value(args, 'influxdb-password')
 
@@ -136,7 +136,7 @@ if __name__ == "__main__":
         args.influxdb_host, args.influxdb_port, args.influxdb_user, influxdb_password, args.influxdb_database))
     print()
 
-    client = influxdb.InfluxDBClient(args.influxdb_host, args.influxdb_port, args.influxdb_user, influxdb_password,
+    client = dbinflux.InfluxDBClient(args.influxdb_host, args.influxdb_port, args.influxdb_user, influxdb_password,
                                      args.influxdb_database)
 
     print(color('Users:', fg='white', bg='green', style='bold'))
